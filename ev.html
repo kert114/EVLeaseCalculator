@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EV Lease Calculator</title>
+    <link rel="stylesheet" type="text/css" href="ev.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>EV vs. Gas Vehicle Cost Calculator</h1>
+        <div class="columns">
+            <div class="column">
+                <h2>EV Calculations</h2>
+                <form>
+                    <label for="vehicleCost">Cost of Electric Vehicle ($):</label>
+                    <input type="number" id="vehicleCostEV" step="any" value="100000">
+
+                    <label for="leaseTerm">Lease Term (Years):</label>
+                    <input type="number" id="leaseTermEV" value="5">
+
+                    <label for="downPayment">Down Payment (%):</label>
+                    <input type="number" id="downPaymentEV" step="any" value="10">
+
+                    <label for="interestRate">Interest Rate (%):</label>
+                    <input type="number" id="interestRateEV" step="any" value="1.95">
+
+                    <label for="drivingDistance">Driving Distance per Year (miles):</label>
+                    <input type="number" id="drivingDistanceEV" step="any" value="13500">
+
+                    <label for="electricCarFuelCost">Electric Car Fuel Cost ($ per mile):</label>
+                    <input type="number" id="electricCarFuelCostEV" step="any" value="0.3">
+
+
+
+                    <!-- Add more EV-related fields here as needed -->
+
+                    <button type="button" id="evCalculateBtn">Calculate EV Cost</button>
+                    <div id="resultEV"></div>
+                </form>
+            </div>
+
+            <div class="column">
+                <h2>Gas Vehicle Calculations</h2>
+                <form>
+
+                    <label for="vehicleCost">Cost of Gas Vehicle ($):</label>
+                    <input type="number" id="vehicleCostGAS" step="any" value="50000">
+
+                    <label for="leaseTerm">Lease Term (Years):</label>
+                    <input type="number" id="leaseTermGas" value="5">
+
+                    <label for="downPayment">Down Payment (%):</label>
+                    <input type="number" id="downPaymentGas" step="any" value="100">
+
+                    <label for="interestRate">Interest Rate (%):</label>
+                    <input type="number" id="interestRateGas" step="any" value="1.95">
+
+                    <label for="drivingDistance">Driving Distance per Year (miles):</label>
+                    <input type="number" id="drivingDistanceGas" step="any" value="13500">
+
+                    <label for="petrolCost">Petrol Cost ($ per mile):</label>
+                    <input type="number" id="petrolCostGas" step="any" value="2.8">
+
+                    <!-- Add more Gas vehicle-related fields here as needed -->
+                    
+                    <button type="button" id="gasCalculateBtn">Calculate Gas Cost</button>
+                    <div id="resultGAS"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <h2>Comparison</h2>
+            <div id="evCostResult"></div>
+            <div id="gasCostResult"></div>
+        </div>
+    </div>
+    <script src="ev.js"></script>
+</body>
+
+</html>
